@@ -1,4 +1,4 @@
-# `ros2_py_template` package
+# `koc_oj4` package
 ROS 2 python package.  [![Static Badge](https://img.shields.io/badge/ROS_2-Humble-34aec5)](https://docs.ros.org/en/humble/)
 ## Packages and build
 
@@ -9,7 +9,7 @@ It is assumed that the workspace is `~/ros2_ws/`.
 cd ~/ros2_ws/src
 ```
 ``` r
-git clone https://github.com/sze-info/ros2_py_template
+git clone https://github.com/Kocsi-HorvathMartin/koc_oj4
 ```
 
 ### Build ROS 2 packages
@@ -17,7 +17,7 @@ git clone https://github.com/sze-info/ros2_py_template
 cd ~/ros2_ws
 ```
 ``` r
-colcon build --packages-select ros2_py_template --symlink-install
+colcon build --packages-select koc_oj4 --symlink-install
 ```
 
 <details>
@@ -29,24 +29,24 @@ source ~/ros2_ws/install/setup.bash
 </details>
 
 ``` r
-ros2 launch ros2_py_template launch_example1.launch.py
+ros2 launch koc_oj4 launch_example1.launch.py
 ```
 
 # Delete this part if you are using it as a template
 
-ROS 2 pacage template, to get started, use template by clicking on the Green button labeled [`Use this template`](https://github.com/sze-info/ros2_py_template/generate) / [`Create new repository`](https://github.com/sze-info/ros2_py_template/generate). 
+ROS 2 pacage template, to get started, use template by clicking on the Green button labeled [`Use this template`](https://github.com/Kocsi-HorvathMartin/koc_oj4/generate) / [`Create new repository`](https://github.com/Kocsi-HorvathMartin/koc_oj4/generate). 
 
 <p align="center"><img src="img/use_this_template01.png" width="60%" /></p>
 
 
 Let's assume 
-- your Github username is `mycoolusername`
-- your ROS 2 repo shold be `cool_ros2_package`
+- your Github username is `Kocsi-HorvathMartinoolusername`
+- your ROS 2 repo shold be `koc_oj4`
 
 Replace everything in the cloned repo:
 
-- `ros2_py_template` >> `cool_ros2_package` (the folder was already renamed after `Use this template`)
-- `sze-info` >> `mycoolusername`
+- `koc_oj4` >> `koc_oj4` (the folder was already renamed after `Use this template`)
+- `Kocsi-HorvathMartin` >> `Kocsi-HorvathMartinoolusername`
 - find all `todo` strings and fill the blanks
 
 The easiest way is VS code:
