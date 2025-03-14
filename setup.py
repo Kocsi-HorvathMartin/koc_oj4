@@ -14,7 +14,7 @@ setup(
         ('share/' + package_name, ['package.xml']),
         (os.path.join('share', package_name), glob('launch/*launch.[pxy][yma]*')), 
     ],
-    install_requires=['setuptools'],
+    install_requires=['setuptools', 'rclpy', 'geometry_msgs', 'turtlesim'],
     zip_safe=True,
     maintainer='todo',
     maintainer_email='todo@todo.com',
@@ -23,7 +23,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            # 'control_vehicle = koc_oj4.control_vehicle:main',
+            'draw_square_node = koc_oj4.draw_square_node:main',
         ],
     },
 )
