@@ -40,7 +40,7 @@ class CmdGen(Node):
             cmd_msg.angular.z = 0.0
 
         # Fordulás
-        elif self.loop_count >= 20 and not self.is_turning:
+        elif self.loop_count >= 30 and not self.is_turning:
             self.is_turning = True
             self.turn_start_angle = self.pose.theta
             cmd_msg.linear.x = 0.0
@@ -48,6 +48,7 @@ class CmdGen(Node):
 
         # Fordulás, amíg 90 fokot nem fordult
         elif self.is_turning:
+            self.get_logger().info(f"Angle: {abs(self.pose.theta - self.turn_start_angle)}")
             if abs(self.pose.theta - self.turn_start_angle) >= math.pi/2:
                 self.is_turning = False
                 self.loop_count = 0 
