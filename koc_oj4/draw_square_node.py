@@ -48,13 +48,12 @@ class CmdGen(Node):
 
         # Fordulás, amíg 90 fokot nem fordult
         elif self.is_turning:
-            self.get_logger().info(f"Angle: {abs(self.pose.theta - self.turn_start_angle)}")
             if abs(self.pose.theta - self.turn_start_angle) >= math.pi/2:
                 self.is_turning = False
                 self.loop_count = 0 
             else:
                 cmd_msg.linear.x = 0.0
-                cmd_msg.angular.z = 1.0
+                cmd_msg.angular.z = 0.25
 
         self.cmd_pub.publish(cmd_msg)
         self.loop_count += 1
