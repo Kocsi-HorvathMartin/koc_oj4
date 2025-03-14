@@ -3,7 +3,6 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from turtlesim.msg import Pose
 import math
-import time
 
 class CmdGen(Node):
 
@@ -58,3 +57,13 @@ class CmdGen(Node):
 
         self.cmd_pub.publish(cmd_msg)
         self.loop_count += 1
+    
+def main(args=None):
+    rclpy.init(args=args)
+    cmd_gen = CmdGen()
+    rclpy.spin(cmd_gen)
+    cmd_gen.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
