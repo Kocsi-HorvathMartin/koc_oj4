@@ -32,3 +32,17 @@ source ~/ros2_ws/install/setup.bash
 ``` r
 ros2 launch koc_oj4 draw_square.launch.py
 ```
+### Graph
+
+```mermaid
+graph LR;
+    A([draw_square_node]):::red
+    B[ /turtle1/cmd_vel]:::light
+    C[ /turtle1/pose]:::light
+
+    C --> A
+    A --> B
+
+    classDef light fill:#34aec5,stroke:#152742,stroke-width:2px,color:#152742  
+    classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
+```
