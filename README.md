@@ -1,4 +1,5 @@
 # `koc_oj4` package
+A package egy node-ból áll, ez a turtlesim szimulátorban képes egy négyzet kirajzolására. A hirdetett topic /turtle1/cmd_vel/twist típusú, míg a topic, amit az elfordulás érzékelésére alkalmaz az a /turtle1/pose. A megvalósítás ROS 2 Humble alatt történik.
 ROS 2 python package.  [![Static Badge](https://img.shields.io/badge/ROS_2-Humble-34aec5)](https://docs.ros.org/en/humble/)
 ## Packages and build
 
